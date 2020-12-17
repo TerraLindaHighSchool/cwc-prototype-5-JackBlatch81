@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //fields
     public List<GameObject> targets;
     private float spawnRate = 1.0f;
     
