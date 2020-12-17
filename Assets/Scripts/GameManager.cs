@@ -15,8 +15,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnTarget());
-        score = 0;
-        scoreText.text = "Score: " + score;
+        UpdateScore(0);
     }
 
     // Update is called once per frame
@@ -32,6 +31,13 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(spawnRate);
             int index = Random.Range(0, targets.Count);
             Instantiate(targets[index]);
+            UpdateScore(5);
         }
+    }
+
+    private void UpdateScore(int scoreToAdd)
+    {
+        score += scoreToAdd;
+        scoreText.text = "Score: " + score;
     }
 }
