@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
+    //when game is over
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
